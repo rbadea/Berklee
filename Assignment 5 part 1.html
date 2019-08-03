@@ -1,0 +1,62 @@
+<!-- // Assignment 5 part 1 -->
+</<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assigmenta tzintzi</title>
+  </head>
+  <body>
+    <br>
+    <div>
+      <textarea id="info" rows="4" cols="50"></textarea>
+    </div>
+
+    <div id=images>
+    </div>
+
+    <script language="javascript">
+
+      let songs = [
+        {
+          title: "Getting Away with It (All Messed Up)",
+          artist: "James",
+          album: "Pleased to Meet You",
+          year: 2001,
+          art: "https://upload.wikimedia.org/wikipedia/en/2/2a/JamesPleasedToMeetYou.jpg"
+        },
+        {
+          title: "Renaissance Affair",
+          artist: "Hooverphonic",
+          album: "Blue Wonder Power Milk",
+          year: 1998,
+          art: "https://upload.wikimedia.org/wikipedia/en/1/17/Hooverphonic-Blue_Wonder_Power_Milk.jpg"
+        },
+        {
+          title: "White Nights",
+          artist: "Oh Land",
+          album: "Oh Land",
+          year: 2011,
+          art: "https://upload.wikimedia.org/wikipedia/en/6/68/Oh_Land_%28album%29.png"
+        }
+      ]
+      let images =  document.getElementById('images');
+      for (let elem of songs){
+        let img_node =  document.createElement('img');
+        img_node.setAttribute( 'src',  elem.art);
+        img_node.setAttribute( 'height', 300);
+        img_node.setAttribute( 'width',300);
+        images.appendChild(img_node);
+      }
+      let list=images.children;
+      let info=document.getElementById('info');
+      info.value='No info';
+      for (let itm of list){
+        itm.addEventListener('click',function(){
+          console.log(itm.src);
+        })
+      }
+
+    </script>
+
+  </body>
+</html>
