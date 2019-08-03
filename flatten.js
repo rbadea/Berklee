@@ -1,4 +1,4 @@
-
+// testing github
 
 function flatten(a,b){
       for (let item of b){
