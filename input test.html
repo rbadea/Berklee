@@ -1,0 +1,38 @@
+<!-- input test -->
+<!DOCTYPE html>
+<html>
+<body>
+
+Name: <input type="text" id="myText" >
+Date: <input type="date" id="myDate" >
+
+<p>Click the button to calculate the age.</p>
+
+<button id="press_me">Try it</button>
+
+<div>Age is <span id="age2">0</span></div>
+
+<script language="javascript">
+// function myFunction() {
+//  let x= document.getElementById("myText").value;
+//  let d=document.getElementById('myDate').value;
+//  let ;
+ // let today=new Date();
+ // let today_year=today.getFullYear();
+ // let age_year=d.getFullYear();
+ // let age=today_year-age_year;
+ // age_display.innerHTML=x;
+// }
+
+let age3        = 6,
+    age_display = document.querySelector('span#age2'),
+    button      = document.querySelector('#press_me') ;
+
+
+button.addEventListener('click', function() {
+  age_display.innerHTML = age3;
+
+</script>
+
+</body>
+</html>

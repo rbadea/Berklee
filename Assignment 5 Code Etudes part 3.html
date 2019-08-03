@@ -1,0 +1,31 @@
+
+<!doctype html>
+<html>
+  <head>
+    <title>Code etude 5 part 3</title>
+  </head>
+  <body>
+        <div id="images">
+          <img src="https://patrickmcneill.com/images/rhaegar-cup.jpg" />
+          <img src="https://patrickmcneill.com/images/OB7Z3731.jpg" />
+          <img src="https://patrickmcneill.com/images/pea640.jpg" />
+        </div>
+        <br>
+        <div id=cale> </div>
+    <script language="javascript">
+    function find_parents(selector){
+      let node=document.querySelector(selector);
+      let pth=[];
+      if (! node) return;
+      while (node){
+        pth.unshift(node.nodeName);
+        node=node.parentNode;
+      }
+      return pth
+    }
+    let pth_display=document.querySelector('#cale');
+    pth_display.innerHTML = find_parents("div#images").join(" > ");
+
+    </script>
+  </body>
+</html>
