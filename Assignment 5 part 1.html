@@ -37,6 +37,13 @@
           album: "Oh Land",
           year: 2011,
           art: "https://upload.wikimedia.org/wikipedia/en/6/68/Oh_Land_%28album%29.png"
+        },
+        {
+          title: "Exercises in Futility VI",
+          artist: "Mgla",
+          album: "Exercises in Futility",
+          year: 2015,
+          art: "https://upload.wikimedia.org/wikipedia/en/0/0b/Mgla_-_Exercises_in_Futility_cover_art.jpg"
         }
       ]
       let images =  document.getElementById('images');
@@ -52,7 +59,11 @@
       info.value='No info';
       for (let itm of list){
         itm.addEventListener('click',function(){
-          console.log(itm.src);
+          for (let nfo of  songs){
+            if (itm.src == nfo.art){
+              info.value = 'Title  : '+nfo.title+'\nArtist : '+nfo.artist+'\nAlbum  : '+nfo.album+'\nYear   : '+nfo.year
+            }
+          }
         })
       }
 
